@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Untuk icon--><script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="Assets/registerstyle.css">
+	<title>Heartland</title>
+</head>
+
+<body>
+	<nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo"><img src="Pictures/Logo.png" id="logo"></a>
+        <div class="main-nav" id="js-menu">
+            <li><a href="/index.html" class="nav-links">HOME</a></li>
+            <li><a href="/timetable.html" class="nav-links">TIMETABLE</a></li>
+            <li><a href="/about.html" class="nav-links">ABOUT</a></li>
+            <li><a href="login.html" class="nav-links"><button class="blogin">LOGIN</button></a></li>
+            <li><a href="getappoinment.html" class="nav-links"><button class="bapp">Get Appointment</button></a></li>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h1>Register</h1>
+            <form action="" id="form">
+                <label for="name">Name</label><br>
+                <input type="text" class="input" placeholder="Full name" id="name" onkeyup="validasi()"><br>
+
+                <label for="email">Email</label><br>
+                <input type="email" class="input" placeholder="example@mail.com" id="email" onkeyup="validasi()"><br>
+
+                <label for="password1">Password</label><br>
+                <input type="password" class="input" placeholder="Password" id="password1" onkeyup="validasi()"><br>
+            
+                <label for="password2">Confirm password</label><br>
+                <input type="password" class="input" placeholder="Confirm your password" id="password2" onkeyup="validasi()"><br><br><hr><br>
+    
+                <label for="gender">Gender</label><br>
+                <input type="radio" class="radio" name="gender"/>Female
+                <input type="radio" class="radio" name="gender"/>Male<br><br>
+
+                <label for="birthday">Birthday</label><br>
+                <input type="date" class="input" id="birthday" onkeyup="validasi()"><br>
+
+                <label for="phone">Phone</label><br>
+                <input type="text" class="input" placeholder="+62" id="phone" onkeyup="validasi()"><br>
+        
+                <label for="address">Address</label><br>
+                <input type="text" class="input" placeholder="Jl." id="address" onkeyup="validasi()"><br>
+
+                <input type="checkbox" class="terms" id="terms">
+                <label class="terms1" for="terms" onkeyup="validasi()">By ticking this, I agree with <a href="#">terms and conditions</a></label><br><br>
+
+                <p id="error"></p>
+                <button type="submit" id="registerbutton" class="registerbutton">Register</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="Assets/registerscript.js"></script>
+</body>
+</html>

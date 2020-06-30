@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Untuk icon--><script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="Assets/getappoinmentstyle.css">
+	<title>Heartland</title>
+</head>
+
+<body>
+	<nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo"><img src="Pictures/Logo.png" id="logo"></a>
+        <div class="main-nav" id="js-menu">
+            <li><a href="/index.html" class="nav-links">HOME</a></li>
+            <li><a href="/timetable.html" class="nav-links">TIMETABLE</a></li>
+            <li><a href="/about.html" class="nav-links">ABOUT</a></li>
+            <li><a href="login.html" class="nav-links"><button class="blogin">LOGIN</button></a></li>
+            <li><a href="getappoinment.html" class="nav-links"><button class="bapp">Get Appointment</button></a></li>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h1>Get appointment</h1>
+            <form action="" id="form" name="form">
+                <label for="purpose">Purpose</label><br>
+                <select id="purpose" class="input1" name="purpose" onkeyup="validasi()">
+                    <option disabled selected hidden value="choose">Choose purpose</option>
+                    <option>Checkup</option>
+                    <option>Feeling sick</option>
+                    <option>Consultation</option>
+                    <option>Control</option>
+                </select><br>
+
+                <label for="specialist">Specialist</label><br>
+                <select id="specialist" class="input1" name="specialist" onkeyup="validasi()" onchange="choose(this.id, 'doctor')">
+                    <option disabled selected hidden value="choose">Choose specialist</option>
+                    <option value="allergist">Allergist</option>
+                    <option value="dentist">Dentist</option>
+                    <option value="medical">Medical geneticist</option>
+                    <option value="surgeon">Surgeon</option>
+                </select><br>
+
+                <label for="doctor">Doctor</label><br>
+                <select id="doctor" class="input1" name="doctor">
+                </select><br>
+
+                <label for="date">Date</label><br>
+                <input type="date" class="input" id="date" onkeyup="validasi()"><br>
+
+                <label for="time">Time</label><br>
+                <input type="time" class="input" name="time" id="time" onkeyup="validasi()"><br><br>
+
+                <p id="error"></p>
+                <button type="submit" id="bookbutton" class="bookbutton">Book now</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script src="Assets/getappoinmentscript.js"></script>
+</body>
+</html>
