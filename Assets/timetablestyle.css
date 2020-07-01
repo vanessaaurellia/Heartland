@@ -10,11 +10,11 @@ body{
 .navbar{
 	font-size: 18px;
 	margin: 0;
-    	background-color: white; 
+    background-color: white; 
 	box-shadow: 0px 3px 6px #7F7767;
 	position: fixed;
-    	top: 0;
-    	width: 100%;
+    top: 0;
+	width: 100%;
 	z-index: 100;
 }
   

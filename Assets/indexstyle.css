@@ -20,7 +20,8 @@ body{
 	box-shadow: 0px 3px 6px #7F7767;
 	position: fixed;
     top: 0;
-    width: 100%;
+	width: 100%;
+	z-index: 100;
 }
   
 .main-nav{
