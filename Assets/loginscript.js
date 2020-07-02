@@ -27,3 +27,30 @@ function validasi(){
         button.disabled = false;
     }
 }
+
+$('#loginbutton').click(function(){
+    let emailmasuk = document.getElementById("email").value;
+    let passwordmasuk = document.getElementById("password").value;
+
+    const users = JSON.parse(sessionStorage.getItem('user'));
+
+    if(users != null){
+        if(users.email == emailmasuk){
+            if(users.password == passwordmasuk){
+                alert("Succesfully login");
+                sessionStorage.setItem('loginUser', JSON.stringify(users));
+                checkLogin();
+                window.location.href='./index.html';
+            }
+            else{
+                alert("Wrong Password!");
+            }
+        }
+        else{
+            alert("Email or password is invalid");
+        }
+    }
+    else{
+        alert("Email or password is invalid");
+    }
+});

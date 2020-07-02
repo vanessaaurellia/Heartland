@@ -5,7 +5,7 @@ navBarToggle.addEventListener("click", function() {
     mainNav.classList.toggle("active");
 });
 
-var button = document.getElementById('bookbutton');
+var button = document.getElementById('registerbutton');
 button.disabled = true;
 
 function validasi(){
@@ -56,4 +56,19 @@ function validasi(){
         document.getElementById("error").innerHTML = message;
         button.disabled = false;
     }
+}
+
+function register(){
+    const semuaData = $('form#register').serializeArray();
+    let inputData = {};
+    semuaData.forEach(data => {
+        if(data.name == "password1" || data.name == "password2"){
+            data.name = "password";
+        }
+        inputData[data.name] = data.value;
+    });
+    sessionStorage.setItem("user", JSON.stringify(inputData));
+    console.log(inputData)
+    alert("Registered! Please login.");
+    window.location.href="./login.html";
 }
