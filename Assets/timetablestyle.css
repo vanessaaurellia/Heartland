@@ -75,6 +75,7 @@ img#logo{
     height: 40px;
 	border-radius: 1.3vw;
 	margin-top: -30px;
+	border: none;
 }
 
 ::-webkit-scrollbar{

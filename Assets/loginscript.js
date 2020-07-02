@@ -31,6 +31,7 @@ function validasi(){
 $('#loginbutton').click(function(){
     let emailmasuk = document.getElementById("email").value;
     let passwordmasuk = document.getElementById("password").value;
+    var btn = document.getElementById("blogin");
 
     const users = JSON.parse(sessionStorage.getItem('user'));
 
@@ -39,8 +40,9 @@ $('#loginbutton').click(function(){
             if(users.password == passwordmasuk){
                 alert("Succesfully login");
                 sessionStorage.setItem('loginUser', JSON.stringify(users));
-                checkLogin();
-                window.location.href='./index.html';
+                location.replace("../index.html");
+                btn.value = 'my value';
+                btn.innerHTML = 'LOGOUT';
             }
             else{
                 alert("Wrong Password!");

@@ -80,7 +80,8 @@ img#logo{
     width: 214px;
     height: 40px;
 	border-radius: 1.3vw;
-	margin-top: -30px;
+    margin-top: -30px;
+    border: none;
 }
 
 .blogin:focus, .bapp:focus{

@@ -19,7 +19,7 @@
             <li><a href="index.html" class="nav-links">HOME</a></li>
             <li><a href="timetable.html" class="nav-links">TIMETABLE</a></li>
             <li><a href="about.html" class="nav-links">ABOUT</a></li>
-            <li><a href="login.html" class="nav-links"><button class="blogin">LOGIN</button></a></li>
+            <li><a href="login.html" class="nav-links"><button class="blogin" id="blogin">LOGIN</button></a></li>
             <li><a href="getappoinment.html" class="nav-links"><button class="bapp">Get Appointment</button></a></li>
         </div>
     </nav>
@@ -28,19 +28,18 @@
         <img src="Pictures/Heartland.png" class="heartland">
         <div class="card">
             <h1>Login</h1>
-            <form action="" id="form">
+            <form id="form">
                 <label for="email">Email</label><br>
                 <input type="email" class="input" name="email" id="email" placeholder="example@mail.com" onkeyup="validasi()"><br>
 
                 <label for="password">Password</label><br>
                 <input type="password" class="input" name="password" id="password" placeholder="Password" onkeyup="validasi()"><br><br>
-                
                 <p id="error"></p>
-                <button type="submit" id="loginbutton" class="loginbutton" onclick="validasi()">Log me in!</button><br>
-
-                <p class="register" for="register">Don't have any account? <a href="register.html">Please register here.</a></p>
-
             </form>
+            <button type="submit" id="loginbutton" class="loginbutton">Log me in!</button><br>
+
+            <p class="register" for="register">Don't have any account? <a href="register.html">Please register here.</a></p>
+
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
