@@ -40,7 +40,7 @@ $('#loginbutton').click(function(){
             if(users.password == passwordmasuk){
                 alert("Succesfully login");
                 sessionStorage.setItem('loginUser', JSON.stringify(users));
-                location.replace("../index.html");
+                location.replace("./index.html");
                 btn.value = 'my value';
                 btn.innerHTML = 'LOGOUT';
             }

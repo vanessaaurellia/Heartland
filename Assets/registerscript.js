@@ -70,5 +70,5 @@ function register(){
     sessionStorage.setItem("user", JSON.stringify(inputData));
     console.log(inputData)
     alert("Registered! Please login.");
-    location.replace("../login.html");
+    location.replace("./login.html");
 }
