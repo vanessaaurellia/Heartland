@@ -66,3 +66,9 @@ function validasi(){
         button.disabled = false;
     }
 }
+
+function book(){
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
+    alert("Successfully booked! Date: " + date + " Time: " + time);
+}
